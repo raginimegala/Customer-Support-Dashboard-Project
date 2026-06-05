@@ -16,7 +16,10 @@ export default [
     languageOptions: {
       parser: tsParser,
 
-      globals: globals.browser,
+      globals: {
+        ...globals.browser,
+        __dirname: 'readonly'
+      },
 
       parserOptions: {
         ecmaVersion: 'latest',
