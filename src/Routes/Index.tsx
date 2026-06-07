@@ -6,8 +6,8 @@ import {
 
 import { lazy, Suspense } from 'react';
 
-import AuthLayout from '@/Layouts/AuthLayout';
-import DashBoardLayout from '@/Layouts/DashBoardLayout';
+import AuthLayout from '@/Layouts/AuthLayout/AuthLayout';
+import DashBoardLayout from '@/Layouts/DashBoardLayout/DashBoardLayout';
 
 import { ROUTES } from '@/Routes/RoutesPath';
 
