@@ -9,7 +9,7 @@ import prettierConfig from 'eslint-config-prettier';
 
 export default [
   {
-    ignores: ['node_modules', 'dist', 'coverage'],
+    ignores: ['node_modules/**', 'dist/**', 'coverage/**'],
 
     files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
 
