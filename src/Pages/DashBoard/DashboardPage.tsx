@@ -1,4 +1,3 @@
-import Card from '@/Components/Molecules/Cards';
 import StatCard from '@/Components/Molecules/StatCard';
 
 const DashboardPage = () => {
