@@ -1,9 +1,12 @@
 import logo from '@/assets/colorlogo.png';
-import { IoEye, IoEyeOff } from 'react-icons/io5';
-import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { ROUTES } from '@/Routes/RoutesPath';
+import Input from '@/Components/Atoms/Input/Index';
+import PasswordInput from '@/Components/Atoms/PasswordInput';
+
+import Button from '@/Components/Atoms/Buttons';
 
 const LoginPage = () => {
-  const [showPassword, setShowPassword] = useState(false);
   return (
     <div className="mb-8">
       <div className="flex items-start gap-4">
@@ -20,31 +23,8 @@ const LoginPage = () => {
 
       <form>
         <div>
-          <label className="mb-2 block text-sm font-medium text-slate-700">
-            Email
-          </label>
-          <input
-            type="text"
-            placeholder="you@example.com"
-            className="w-full rounded-lg border border-slate-300 px-4 py-3 outline-none placeholder:text-slate-400 focus:border-slate-500"
-          />
-          <label className="mb-2 block text-sm font-medium text-slate-700">
-            Password
-          </label>
-          <div className="relative">
-            <input
-              type={showPassword ? 'text' : 'password'}
-              placeholder="Password"
-              className="w-full rounded-lg border border-slate-300 px-4 py-3 pr-12 outline-none placeholder:text-slate-400 focus:border-slate-500"
-            />
-            <button
-              type="button"
-              onClick={() => setShowPassword(!showPassword)}
-              className="absolute right-4 top-1/2 -translate-y-1/2"
-            >
-              {showPassword ? <IoEyeOff /> : <IoEye />}
-            </button>
-          </div>
+          <Input label="email" type="text" placeholder="you@example.com" />
+          <PasswordInput label="Password" placeholder="Enter your password" />
         </div>
         <div className="w-full space-y-3">
           <div className="flex justify-end">
@@ -59,18 +39,15 @@ const LoginPage = () => {
           </button>
         </div>
         <div className="space-y-4">
-          <button
-            type="submit"
-            className="w-full rounded-lg bg-blue-600 py-3 font-medium text-white transition hover:bg-slate-700"
-          >
+          <Button type="submit" fullWidth>
             Sign in
-          </button>
+          </Button>
           <div className="text-center">
             <p>
               Dont have an account?{' '}
-              <a href="#" className="text-blue-600">
+              <Link to={ROUTES.SIGNUP} className="text-blue-600">
                 Sign up
-              </a>
+              </Link>
             </p>
           </div>
         </div>
