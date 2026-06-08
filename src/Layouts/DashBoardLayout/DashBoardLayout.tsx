@@ -13,7 +13,6 @@ const DashBoardLayout = () => {
           <DashboardHeader />
 
           <main className="flex-1 bg-slate-100 p-5">
-            <h2>Dashboard</h2>
             <Outlet />
           </main>
         </div>

@@ -2,7 +2,6 @@ import type { InputProps } from './Types';
 
 const Input = ({
   type = 'text',
-  label,
   value,
   required = false,
   placeholder,
@@ -11,12 +10,6 @@ const Input = ({
 }: InputProps) => {
   return (
     <div>
-      {label && (
-        <label className="mb-2 block text-sm font-medium text-slate-700">
-          {label}
-        </label>
-      )}
-
       <input
         type={type}
         placeholder={placeholder}

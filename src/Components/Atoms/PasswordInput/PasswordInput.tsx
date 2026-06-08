@@ -5,7 +5,6 @@ import { IoEye, IoEyeOff } from 'react-icons/io5';
 import type { PasswordInputProps } from './Types';
 
 const PasswordInput = ({
-  label,
   placeholder,
   value,
   name,
@@ -15,7 +14,6 @@ const PasswordInput = ({
   const [showPassword, setShowPassword] = useState(false);
   return (
     <div>
-      {label && <label>{label}</label>}
       <div className="relative">
         <input
           type={showPassword ? 'text' : 'password'}

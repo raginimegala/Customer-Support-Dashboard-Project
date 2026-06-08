@@ -5,6 +5,7 @@ import Input from '@/Components/Atoms/Input/Index';
 import PasswordInput from '@/Components/Atoms/PasswordInput';
 
 import Button from '@/Components/Atoms/Buttons';
+import FormField from '@/Components/Molecules/FormFiled';
 
 const LoginPage = () => {
   return (
@@ -23,8 +24,12 @@ const LoginPage = () => {
 
       <form>
         <div>
-          <Input label="email" type="text" placeholder="you@example.com" />
-          <PasswordInput label="Password" placeholder="Enter your password" />
+          <FormField label="Email">
+            <Input type="text" placeholder="you@example.com" />
+          </FormField>
+          <FormField label="Password">
+            <PasswordInput placeholder="Enter your password" />
+          </FormField>
         </div>
         <div className="w-full space-y-3">
           <div className="flex justify-end">
