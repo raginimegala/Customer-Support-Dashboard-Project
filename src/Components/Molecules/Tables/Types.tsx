@@ -1,8 +1,6 @@
 import type { ReactNode } from 'react';
 
-export type CardProps = {
+export type TableProps = {
   children: ReactNode;
-  title?: string;
-  action?: ReactNode;
   className?: string;
 };
