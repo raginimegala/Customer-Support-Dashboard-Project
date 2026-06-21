@@ -3,6 +3,7 @@ import StatusPage from '@/Components/Atoms/StatusPage/StatusPage';
 import PriorityBadge from '@/Components/Atoms/PriorityBadge/PriorityBadge';
 import Table from '@/Components/Molecules/Tables/index';
 import { tickets } from '@/Constants/RecentTicketCard';
+import type { Ticket } from './Types';
 
 const RecentTicketsCard = () => {
   return (
